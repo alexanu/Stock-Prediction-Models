@@ -19,47 +19,46 @@
   * [Realtime Agent](realtime-agent)
   * [Data Explorations](https://github.com/huseinzol05/Stock-Prediction-Models#data-explorations)
   * [Simulations](https://github.com/huseinzol05/Stock-Prediction-Models#simulations)
+  * [Tensorflow-js](https://github.com/huseinzol05/Stock-Prediction-Models#tensorflow-js)
+  * [Misc](https://github.com/huseinzol05/Stock-Prediction-Models#misc)
   * [Results](https://github.com/huseinzol05/Stock-Prediction-Models#results)
+    * [Results Agent](https://github.com/huseinzol05/Stock-Prediction-Models#results-agent)
+    * [Results signal prediction](https://github.com/huseinzol05/Stock-Prediction-Models#results-signal-prediction)
+    * [Results analysis](https://github.com/huseinzol05/Stock-Prediction-Models#results-analysis)
+    * [Results simulation](https://github.com/huseinzol05/Stock-Prediction-Models#results-simulation)
 
 ## Contents
 
 ### Models
 
-#### [Stacking models](stacking)
-  1. Deep Feed-forward Auto-Encoder Neural Network to reduce dimension + Deep Recurrent Neural Network + ARIMA + Extreme Boosting Gradient Regressor
-  2. Adaboost + Bagging + Extra Trees + Gradient Boosting + Random Forest + XGB
-
 #### [Deep-learning models](deep-learning)
- 1. LSTM Recurrent Neural Network
- 2. Encoder-Decoder Feed-forward + LSTM Recurrent Neural Network
- 3. LSTM Bidirectional Neural Network
- 4. 2-Path LSTM Recurrent Neural Network
- 5. GRU Recurrent Neural Network
- 6. Encoder-Decoder Feed-forward + GRU Recurrent Neural Network
- 7. GRU Bidirectional Neural Network
- 8. 2-Path GRU Recurrent Neural Network
- 9. Vanilla Recurrent Neural Network
- 10. Encoder-Decoder Feed-forward + Vanilla Recurrent Neural Network
- 11. Vanilla Bidirectional Neural Network
- 12. 2-Path Vanilla Recurrent Neural Network
- 13. LSTM Sequence-to-Sequence Recurrent Neural Network
- 14. LSTM with Attention Recurrent Neural Network
- 15. LSTM Sequence-to-Sequence with Attention Recurrent Neural Network
- 16. LSTM Sequence-to-Sequence Bidirectional Recurrent Neural Network
- 17. LSTM Sequence-to-Sequence with Attention Bidirectional Recurrent Neural Network
- 18. LSTM with Attention Scaled-Dot Recurrent Neural Network
- 19. LSTM with Dilated Recurrent Neural Network
- 20. Only Attention Neural Network
- 21. Multihead Attention Neural Network
- 22. LSTM with Bahdanau Attention
- 23. LSTM with Luong Attention
- 24. LSTM with Bahdanau + Luong Attention
- 25. DNC Recurrent Neural Network
- 26. Residual LSTM Recurrent Neural Network
- 27. Byte-net
- 28. Attention is all you need
- 29. Fairseq
- 30. Dilation CNN + LSTM RNN
+ 1. LSTM
+ 2. LSTM Bidirectional
+ 3. LSTM 2-Path
+ 4. GRU
+ 5. GRU Bidirectional
+ 6. GRU 2-Path
+ 7. Vanilla
+ 8. Vanilla Bidirectional
+ 9. Vanilla 2-Path
+ 10. LSTM Seq2seq
+ 11. LSTM Bidirectional Seq2seq
+ 12. LSTM Seq2seq VAE
+ 13. GRU Seq2seq
+ 14. GRU Bidirectional Seq2seq
+ 15. GRU Seq2seq VAE
+ 16. Attention-is-all-you-Need
+ 17. CNN-Seq2seq
+ 18. Dilated-CNN-Seq2seq
+
+**Bonus**
+
+1. How to use one of the model to forecast `t + N`, [how-to-forecast.ipynb](deep-learning/how-to-forecast.ipynb)
+2. Consensus, how to use sentiment data to forecast `t + N`, [sentiment-consensus.ipynb](deep-learning/sentiment-consensus.ipynb)
+
+#### [Stacking models](stacking)
+ 1. Deep Feed-forward Auto-Encoder Neural Network to reduce dimension + Deep Recurrent Neural Network + ARIMA + Extreme Boosting Gradient Regressor
+ 2. Adaboost + Bagging + Extra Trees + Gradient Boosting + Random Forest + XGB
 
 ### [Agents](agent)
 
@@ -90,19 +89,27 @@
 ### [Data Explorations](misc)
 
 1. stock market study on TESLA stock, [tesla-study.ipynb](misc/tesla-study.ipynb)
-2. fashion trending prediction with cross-validation, [fashion-forecasting.ipynb](misc/fashion-forecasting.ipynb)
-3. Bitcoin analysis with LSTM prediction, [bitcoin-analysis-lstm.ipynb](misc/bitcoin-analysis-lstm.ipynb)
-4. Outliers study using K-means, SVM, and Gaussian on TESLA stock [outliers.ipynb](misc/outliers.ipynb)
-5. Kijang Emas Bank Negara, [kijang-emas-bank-negara.ipynb](misc/kijang-emas-bank-negara.ipynb)
+2. Outliers study using K-means, SVM, and Gaussian on TESLA stock, [outliers.ipynb](misc/outliers.ipynb)
+3. Overbought-Oversold study on TESLA stock, [overbought-oversold.ipynb](misc/overbought-oversold.ipynb)
+4. Which stock you need to buy? [which-stock.ipynb](misc/which-stock.ipynb)
 
 ### [Simulations](simulation)
 
-1. Stock market simulation using Monte Carlo, [stock-forecasting-monte-carlo.ipynb](simulation/stock-forecasting-monte-carlo.ipynb)
-2. Stock market simulation using Monte Carlo Markov Chain Metropolis-Hasting, [mcmc-stock-market.ipynb](simulation/mcmc-stock-market.ipynb)
+1. Simple Monte Carlo, [monte-carlo-drift.ipynb](simulation/monte-carlo-drift.ipynb)
+2. Dynamic volatility Monte Carlo, [monte-carlo-dynamic-volatility.ipynb](simulation/monte-carlo-dynamic-volatility.ipynb)
+3. Drift Monte Carlo, [monte-carlo-drift.ipynb](simulation/monte-carlo-drift.ipynb)
+4. Multivariate Drift Monte Carlo BTC/USDT with Bitcurate sentiment, [multivariate-drift-monte-carlo.ipynb](simulation/multivariate-drift-monte-carlo.ipynb)
+5. Portfolio optimization, [portfolio-optimization.ipynb](simulation/portfolio-optimization.ipynb), inspired from https://pythonforfinance.net/2017/01/21/investment-portfolio-optimisation-with-python/
 
 ### [Tensorflow-js](stock-forecasting-js)
 
-I code [LSTM Recurrent Neural Network](deep-learning/1.lstm.ipynb) and [Simple signal rolling agent](agent/simple-agent.ipynb) inside Tensorflow JS, you can try it here, [huseinhouse.com/stock-forecasting-js](https://huseinhouse.com/stock-forecasting-js/)
+I code [LSTM Recurrent Neural Network](deep-learning/1.lstm.ipynb) and [Simple signal rolling agent](agent/simple-agent.ipynb) inside Tensorflow JS, you can try it here, [huseinhouse.com/stock-forecasting-js](https://huseinhouse.com/stock-forecasting-js/), you can download any historical CSV and upload dynamically.
+
+### [Misc](misc)
+
+1. fashion trending prediction with cross-validation, [fashion-forecasting.ipynb](misc/fashion-forecasting.ipynb)
+2. Bitcoin analysis with LSTM prediction, [bitcoin-analysis-lstm.ipynb](misc/bitcoin-analysis-lstm.ipynb)
+3. Kijang Emas Bank Negara, [kijang-emas-bank-negara.ipynb](misc/kijang-emas-bank-negara.ipynb)
 
 ## Results
 
@@ -202,58 +209,129 @@ I code [LSTM Recurrent Neural Network](deep-learning/1.lstm.ipynb) and [Simple s
 
 <img src="output-agent/abcd-strategy.png" width="70%" align="">
 
-### Results free agent
-
-**This agent able to buy or sell N-units per transaction.**
-
-evolution strategy agent [evolution-strategy-agent.ipynb](free-agent/evolution-strategy-agent.ipynb)
-
-```text
-total gained 11037.529911, total investment 110.375299 %
-```
-
-evolution strategy with bayesian agent [evolution-strategy-bayesian-agent.ipynb](free-agent/evolution-strategy-bayesian-agent.ipynb)
-
-```text
-total gained 13295.469683, total investment 132.954697 %
-```
-
-<img src="output/tesla-nes.png" width="70%" align="">
-
 ### Results signal prediction
 
-LSTM Recurrent Neural Network
+I will cut the dataset to train and test datasets,
 
-<img src="output/rnn-only.png" width="70%" align="">
+1. Train dataset derived from starting timestamp until last 30 days
+2. Test dataset derived from last 30 days until end of the dataset
 
-LSTM Bidirectional Neural Network
+So we will let the model do forecasting based on last 30 days, and we will going to repeat the experiment for 10 times. You can increase it locally if you want, and tuning parameters will help you by a lot.
 
-<img src="https://raw.githubusercontent.com/huseinzol05/Stock-Prediction-Comparison/master/output/download%20(1).png" width="70%" align="">
+1. LSTM, accuracy 95.693%, time taken for 1 epoch 01:09
 
-2-Path LSTM Recurrent Neural Network
+<img src="output/lstm.png" width="70%" align="">
 
-<img src="output/download.png" width="70%" align="">
+2. LSTM Bidirectional, accuracy 93.8%, time taken for 1 epoch 01:40
 
-Deep Feed-forward Auto-Encoder Neural Network to reduce dimension + Deep Recurrent Neural Network + ARIMA + Extreme Boosting Gradient Regressor
+<img src="output/bidirectional-lstm.png" width="70%" align="">
 
-<img src="output/stack-xgb.png" width="70%" align="">
+3. LSTM 2-Path, accuracy 94.63%, time taken for 1 epoch 01:39
 
-LSTM Sequence-to-Sequence Recurrent Neural Network
+<img src="output/lstm-2path.png" width="70%" align="">
+
+4. GRU, accuracy 94.63%, time taken for 1 epoch 02:10
+
+<img src="output/gru.png" width="70%" align="">
+
+5. GRU Bidirectional, accuracy 92.5673%, time taken for 1 epoch 01:40
+
+<img src="output/bidirectional-gru.png" width="70%" align="">
+
+6. GRU 2-Path, accuracy 93.2117%, time taken for 1 epoch 01:39
+
+<img src="output/gru-2path.png" width="70%" align="">
+
+7. Vanilla, accuracy 91.4686%, time taken for 1 epoch 00:52
+
+<img src="output/vanilla.png" width="70%" align="">
+
+8. Vanilla Bidirectional, accuracy 88.9927%, time taken for 1 epoch 01:06
+
+<img src="output/bidirectional-vanilla.png" width="70%" align="">
+
+9. Vanilla 2-Path, accuracy 91.5406%, time taken for 1 epoch 01:08
+
+<img src="output/vanilla-2path.png" width="70%" align="">
+
+10. LSTM Seq2seq, accuracy 94.9817%, time taken for 1 epoch 01:36
 
 <img src="output/lstm-seq2seq.png" width="70%" align="">
 
-LSTM Sequence-to-Sequence with Attention Recurrent Neural Network
+11. LSTM Bidirectional Seq2seq, accuracy 94.517%, time taken for 1 epoch 02:30
 
-<img src="output/lstm-seq2seq-attention.png" width="70%" align="">
+<img src="output/bidirectional-lstm-seq2seq.png" width="70%" align="">
 
-LSTM Sequence-to-Sequence with Attention Bidirectional Recurrent Neural Network
+12. LSTM Seq2seq VAE, accuracy 95.4190%, time taken for 1 epoch 01:48
 
-<img src="output/lstm-seq2seq-bidirectional-attention.png" width="70%" align="">
+<img src="output/lstm-seq2seq-vae.png" width="70%" align="">
 
-Encoder-Decoder Feed-forward + LSTM Recurrent Neural Network
+13. GRU Seq2seq, accuracy 90.8854%, time taken for 1 epoch 01:34
 
-<img src="output/encoder-rnn.png" width="70%" align="">
+<img src="output/gru-seq2seq.png" width="70%" align="">
 
-Adaboost + Bagging + Extra Trees + Gradient Boosting + Random Forest + XGB
+14. GRU Bidirectional Seq2seq, accuracy 67.9915%, time taken for 1 epoch 02:30
 
-<img src="output/stack-ensemble.png" width="70%" align="">
+<img src="output/bidirectional-gru-seq2seq.png" width="70%" align="">
+
+15. GRU Seq2seq VAE, accuracy 89.1321%, time taken for 1 epoch 01:48
+
+<img src="output/gru-seq2seq-vae.png" width="70%" align="">
+
+16. Attention-is-all-you-Need, accuracy 94.2482%, time taken for 1 epoch 01:41
+
+<img src="output/attention-is-all-you-need.png" width="70%" align="">
+
+17. CNN-Seq2seq, accuracy 90.74%, time taken for 1 epoch 00:43
+
+<img src="output/cnn-seq2seq.png" width="70%" align="">
+
+18. Dilated-CNN-Seq2seq, accuracy 95.86%, time taken for 1 epoch 00:14
+
+<img src="output/dilated-cnn-seq2seq.png" width="70%" align="">
+
+**Bonus**
+
+1. How to forecast,
+
+<img src="output/how-to-forecast.png" width="70%" align="">
+
+2. Sentiment consensus,
+
+<img src="output/sentiment-consensus.png" width="70%" align="">
+
+### Results analysis
+
+1. Outliers study using K-means, SVM, and Gaussian on TESLA stock
+
+<img src="misc/outliers.png" width="70%" align="">
+
+2. Overbought-Oversold study on TESLA stock
+
+<img src="misc/overbought-oversold.png" width="70%" align="">
+
+3. Which stock you need to buy?
+
+<img src="misc/which-stock.png" width="40%" align="">
+
+### Results simulation
+
+1. Simple Monte Carlo
+
+<img src="simulation/monte-carlo-simple.png" width="70%" align="">
+
+2. Dynamic volatity Monte Carlo
+
+<img src="simulation/monte-carlo-dynamic-volatility.png" width="70%" align="">
+
+3. Drift Monte Carlo
+
+<img src="simulation/monte-carlo-drift.png" width="70%" align="">
+
+4. Multivariate Drift Monte Carlo BTC/USDT with Bitcurate sentiment
+
+<img src="simulation/multivariate-drift-monte-carlo.png" width="70%" align="">
+
+5. Portfolio optimization
+
+<img src="simulation/portfolio-optimization.png" width="40%" align="">
